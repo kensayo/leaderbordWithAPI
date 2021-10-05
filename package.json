@@ -1,5 +1,5 @@
 {
-  "name": "webpack-demo",
+  "name": "leaderbordWithAPI",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.1.2",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
@@ -20,6 +21,15 @@
     "style-loader": "^3.2.1",
     "webpack": "^5.53.0",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.2.1"
-  }
+    "webpack-dev-server": "^4.3.1"
+  },
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kensayo/leaderbordWithAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kensayo/leaderbordWithAPI/issues"
+  },
+  "homepage": "https://github.com/kensayo/leaderbordWithAPI#readme"
 }
