@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .w-40 {
-    min-width: 350px;
-    width: 40%;
-    max-width: 450px;
+  min-width: 350px;
+  width: 40%;
+  max-width: 450px;
 }
