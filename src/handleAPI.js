@@ -1,42 +1,43 @@
-class API {
-    constructor() {
-        this.scores = []
-        this.api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/O5QQHSdSiCLaYlNeo8vj/scores/'
-    }
+import { updateTable } from "./updateData";
 
-    getScores() {
-        fetch(this.api).then(response => response.json()).then(json => {
-            console.log(json)
-            this.scores = json.parse()
-        });
-        return this.scores;
-    }
+var resp, message;
+const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/O5QQHSdSiCLaYlNeo8vj/scores/';
 
-    addScore(name, score) {
-        let message;
-        fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/O5QQHSdSiCLaYlNeo8vj/scores/', { 
+const getScores = () => {
+    resp = undefined;
+    fetch(api).then(function (response) { 
+        return response.json()
+    }).then(function (json) {
+       updateTable(json) ;
+    });
+    return resp;
+}
+
+const addScore = (name, score) => {
+    fetch(api, {
         method: 'POST',
-        body: JSON.stringify({ 
+        body: JSON.stringify({
             "user": name,
             "score": score
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
-        }).then(response => response.json()).then(json => {
-            console.log(json)
-            message = json;
-        });
-        return message;    
-    }
+    }).then(response => response.json()).then(json => {
+        console.log(json)
+        message = json;
+    });
+    return message;
 }
+
+export {addScore, getScores}
 
 // Crear Juego
 /*
-fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', { 
+fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
 method: 'POST',
-body: JSON.stringify({ 
-	"name": "Kenny's Game" 
+body: JSON.stringify({
+    "name": "Kenny's Game"
 }),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
@@ -49,10 +50,10 @@ body: JSON.stringify({
 
 // Crear nuevo score
 
-fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/O5QQHSdSiCLaYlNeo8vj/scores/', { 
+fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/O5QQHSdSiCLaYlNeo8vj/scores/', {
 method: 'POST',
-body: JSON.stringify({ 
-	"user": "Kenny",
+body: JSON.stringify({
+    "user": "Kenny",
     "score":"John Doe"
 }),
   headers: {

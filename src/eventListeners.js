@@ -1,16 +1,15 @@
-import refreshList from './handleRefresh.js';
-import handleSubmit from './handleSubmit.js';
+import * as API from './handleAPI';
 
 const addListeners = () => {
   const updateButton = document.getElementById('update');
   const submitButton = document.getElementById('submit');
 
   updateButton.addEventListener('click', () => {
-    refreshList();
+    API.getScores();
   });
 
   submitButton.addEventListener('click', () => {
-    handleSubmit();
+    API.addScore("Viviana", "150");
   });
 };
 
