@@ -1,16 +1,18 @@
-import refreshList from './handleRefresh.js';
-import handleSubmit from './handleSubmit.js';
+import { getScores } from './handleAPI.js';
+import addItem from './addItem.js';
 
 const addListeners = () => {
   const updateButton = document.getElementById('update');
   const submitButton = document.getElementById('submit');
 
+  getScores();
+
   updateButton.addEventListener('click', () => {
-    refreshList();
+    getScores();
   });
 
   submitButton.addEventListener('click', () => {
-    handleSubmit();
+    addItem();
   });
 };
 
