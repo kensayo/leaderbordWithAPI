@@ -15,10 +15,10 @@ const updateTable = (scores) => {
     const name = document.createElement('strong');
 
     item.setAttribute('class', 'list-group-item');
-    name.appendChild(document.createTextNode(`${element.user}: `));
+    name.appendChild(document.createTextNode(`${element.score}: `));
 
     item.append(name);
-    item.appendChild(document.createTextNode(element.score));
+    item.appendChild(document.createTextNode(element.user));
 
     list.append(item);
   });
