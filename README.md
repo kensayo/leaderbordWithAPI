@@ -2,17 +2,29 @@
 
 # LeaderBoard with API
 
-Working with APIs
+![](img/screenshot.png)
 
-## Built with
+> Simple app that calls an API to fetch the scores, also you can add your score of a game.
+
+## 👷🏻 Built with
 
 - Vanilla JavaScript
 - ESLint
 - WebPack
+- Swal
+- Bootstrap
+- GIT
+- VSCode
 
-### Setup
+## 🌐 Live Preview
 
-To get a local copy up and running follow these simple example steps.
+> You can visit a live preview of the app right here
+
+[Live preview](https://kensayo.github.io/leaderbordWithAPI/)
+
+## 👨🏻‍🔧 Setup
+
+> To get a local copy up and running follow these simple example steps.
 
 - Open terminal
 - Clone this project by command git clone  ```https://github.com/kensayo/leaderbordWithAPI.git```
@@ -31,14 +43,14 @@ To get a local copy up and running follow these simple example steps.
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+> Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+> Feel free to check the [issues page](../../issues/).
 
-## Show your support
+## 🤩 Show your support
 
-Give a ⭐️ if you like this project!
+> Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## 👨🏻‍🎓 Acknowledgments
 
 - [Microverse](https://www.microverse.org/)
