@@ -17,7 +17,7 @@ const updateTable = (scores) => {
     item.setAttribute('class', 'list-group-item');
     name.appendChild(document.createTextNode(`${element.score}: `));
 
-    if (i % 2 === 0) {      
+    if (i % 2 === 0) {
       item.classList.add('bg-light');
     }
 

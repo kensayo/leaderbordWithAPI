@@ -1,5 +1,5 @@
-import updateTable from './updateData.js';
 import Swal from 'sweetalert2';
+import updateTable from './updateData.js';
 
 let message;
 const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/5vqhBn3iKlrJoDtpjB0E/scores/';
@@ -15,7 +15,7 @@ const addScore = (name, score) => {
     method: 'POST',
     body: JSON.stringify({
       user: name,
-      score: score,
+      score,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -23,12 +23,12 @@ const addScore = (name, score) => {
   }).then((response) => response.json()).then((json) => {
     Swal.fire({
       icon: 'success',
-      text: json.result
+      text: json.result,
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.reload();
       }
-    })
+    });
   });
   return message;
 };
