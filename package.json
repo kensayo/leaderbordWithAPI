@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.1.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "sweetalert2": "^11.1.7"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

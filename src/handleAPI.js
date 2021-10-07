@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import updateTable from './updateData.js';
 
 let message;
@@ -20,8 +21,14 @@ const addScore = (name, score) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   }).then((response) => response.json()).then((json) => {
-    message = json;
-    window.location.reload();
+    Swal.fire({
+      icon: 'success',
+      text: json.result,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.reload();
+      }
+    });
   });
   return message;
 };

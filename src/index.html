@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeaderBoard API</title>
 </head>
-<body class="container">
-    <h1>LeaderBoard</h1>
+<body class="p-5 container">
+    <h1 class="text-center text-white">LeaderBoard Scores</h1>
     <div class="d-flex justify-content-around flex-row">
         <section class="w-40 p-3">
             <div class="d-flex flex-row justify-content-between">
-                <h2>Recent Scores</h2>
-                <button type="button" id="update" class="btn btn-secondary">Refresh</button>
+                <h2 class="fw-bold text-white">Recent Scores</h2>
+                <button type="button" id="update" class="btn btn-success">Refresh</button>
             </div>
-            <ul id="list" class="list-group my-2">              
+            <ul id="list" class="border border-2 border-success list-group my-2">              
             </ul>
         </section>
         <section class="w-40 p-3">
-            <h2> Add your score</h2>
+            <h2 class="fw-bold text-white"> Add your score</h2>
             <div class="d-flex flex-column">
                 <input class="my-2" type="text" id="user" placeholder="Your name">
-                <input class="my-2" type="text" id="score" placeholder="Your score">
-                <button class="my-2 w-25 align-self-end btn btn-secondary" id="submit">Submit</button>
+                <input class="my-2" type="number" id="score" placeholder="Your score">
+                <button class="my-2 w-25 align-self-end btn btn-success" id="submit">Submit</button>
             </div>
         </section>
     </div>
