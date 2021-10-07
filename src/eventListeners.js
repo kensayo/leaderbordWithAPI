@@ -1,15 +1,18 @@
-import * as API from './handleAPI';
+import { getScores } from './handleAPI';
+import addItem from './addItem';
 
 const addListeners = () => {
   const updateButton = document.getElementById('update');
   const submitButton = document.getElementById('submit');
 
+  getScores();
+
   updateButton.addEventListener('click', () => {
-    API.getScores();
+    getScores();
   });
 
   submitButton.addEventListener('click', () => {
-    API.addScore("Viviana", "150");
+    addItem();
   });
 };
 
