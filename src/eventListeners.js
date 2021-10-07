@@ -1,5 +1,5 @@
-import { getScores } from './handleAPI';
-import addItem from './addItem';
+import { getScores } from './handleAPI.js';
+import addItem from './addItem.js';
 
 const addListeners = () => {
   const updateButton = document.getElementById('update');
