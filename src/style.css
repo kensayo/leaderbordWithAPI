@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Josefin+Sans:wght@200&display=swap');
+
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0) !important;
 }
 
 .w-40 {
   min-width: 350px;
   width: 40%;
   max-width: 450px;
+}
+
+h1 {
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size:  4rem !important;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:  2rem !important;
 }
